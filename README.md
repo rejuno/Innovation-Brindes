@@ -7,6 +7,8 @@ Projeto desenvolvido como Teste Prático para Front-end, focado em alta performa
 
 https://github.com/user-attachments/assets/d5644661-15d9-4118-adb3-48b1362834dc
 
+## Lighthouse
+<img width="1901" height="948" alt="image" src="https://github.com/user-attachments/assets/fa0a8e32-c780-4d8b-88f5-f522e5776e58" />
 
 
 ## 🛠️ Tecnologias e Decisões Técnicas
