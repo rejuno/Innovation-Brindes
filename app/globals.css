@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  /* Isso diz ao Tailwind v4 para criar as classes text-primary e bg-primary */
+  --color-primary: #80BC04;
+  --color-secondary: #FFFFFF;
+  --color-accent: #717171;
+}
+
+:root {
+  --primary: #80BC04;
+  --secondary: #FFFFFF;
+  --accent: #717171;
+}
