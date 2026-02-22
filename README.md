@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 Innovation Brindes - Catálogo de Produtos
 
-## Getting Started
+Projeto desenvolvido como Teste Prático para Front-end, focado em alta performance, fidelidade visual e boas práticas de arquitetura utilizando Next.js 14.
 
-First, run the development server:
+## 🚀 Demonstração
+
+
+https://github.com/user-attachments/assets/d5644661-15d9-4118-adb3-48b1362834dc
+
+
+
+## 🛠️ Tecnologias e Decisões Técnicas
+
+Para este desafio, foram escolhidas tecnologias que garantem escalabilidade e uma experiência de usuário fluida:
+
+- **Next.js 14 (App Router)**: Escolhido pela eficiência no roteamento e facilidade na separação de Server e Client Components.
+- **Zustand**: Utilizado para o gerenciamento de estado global (Autenticação e Favoritos) por ser extremamente leve e performático.
+- **TanStack Query (React Query)**: Implementado para o consumo da API, garantindo cache inteligente, revalidação automática e estados de carregamento (Skeletons) nativos.
+- **Tailwind CSS**: Utilizado para garantir 100% de fidelidade ao layout proposto, com design responsivo Mobile-First.
+- **Middleware**: Camada de segurança no nível do servidor que protege a rota `/produtos`, validando o token antes mesmo da página carregar.
+- **Vitest + Testing Library**: Testes unitários focados na integridade dos componentes de UI.
+
+## ✅ Requisitos Implementados
+
+- [x] **Login**: Sistema de autenticação com persistência de token (Cookies e Store).
+- [x] **Grid Responsivo**: Listagem fiel às referências visuais com selo "Exclusivo" e formatação BRL.
+- [x] **Busca com Debounce**: Filtro por nome ou código que evita requisições excessivas à API.
+- [x] **Ordenação Local**: Opções para ordenar por Menor/Maior Preço e Nome (A-Z).
+- [x] **Sistema de Favoritos**: Persistência no `localStorage` para manter os dados após o reload.
+- [x] **Detalhes do Produto**: Modal acessível e detalhado com fechamento via tecla ESC e clique externo.
+- [x] **Dockerização**: Aplicação pronta para deploy em containers.
+
+## 🐳 Como Rodar com Docker
+
+A aplicação possui um `Dockerfile` configurado para produção. Para rodar:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 1. Build da imagem
+docker build -t innova-frontend .
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 2. Execução do container
+docker run -p 3000:3000 innova-frontend
